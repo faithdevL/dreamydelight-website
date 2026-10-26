@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --pink: #d9879e;
+  --dark-pink: #a94e6b;
+  --light-pink: #fff0f4;
+  --cream: #fffaf5;
+  --brown: #59413a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+  background: rgba(255, 250, 245, 0.97);
+  box-shadow: 0 2px 14px #59413a12;
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--dark-pink);
+}
+
+.navbar-brand span {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+}
+
+.nav-link {
+  color: var(--brown);
+  margin-left: 12px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--dark-pink);
+}
+
+.hero {
+  min-height: 250px;
+  display: flex;
+  align-items: right;
+  background:
+    linear-gradient(90deg, #fffaf5 5%, #fffaf5ed 40%, #fffaf555 100%),
+    url('images/OIP (6).webp')
+    right/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 570px;
+  padding: 80px 0;
+  animation: appear 0.8s ease both;
+}
+
+.hero h1 {
+  font-size: clamp(2.7rem, 6vw, 4.5rem);
+  line-height: 1.13;
+  margin-bottom: 22px;
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: var(--dark-pink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.btn-cake {
+  background: var(--dark-pink);
+  color: white;
+  border: 1px solid var(--dark-pink);
+  padding: 11px 22px;
+  transition: 0.3s ease;
+}
+
+.btn-cake:hover {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline-cake {
+  color: var(--dark-pink);
+  border: 1px solid var(--dark-pink);
+  padding: 11px 22px;
+  margin-left: 7px;
+  transition: 0.3s ease;
+}
+
+.btn-outline-cake:hover {
+  background: var(--light-pink);
+  color: var(--dark-pink);
+}
+
+.section-space {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 16px;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  height: 100%;
+  background: white;
+  padding: 30px 22px;
+  border: 1px solid #f2e0e3;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px #59413a12;
+}
+
+.feature-icon {
+  color: var(--dark-pink);
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.feature-box h3 {
+  font-size: 1.4rem;
+}
+
+.feature-box p {
+  margin-bottom: 0;
+}
+
+footer {
+  background: var(--brown);
+  color: white;
+  padding: 24px 12px;
+  text-align: center;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 480px;
+    background-position: 60% center;
+  }
+
+  .hero-content {
+    padding: 60px 12px;
+  }
+
+  .btn-outline-cake {
+    margin: 10px 0 0;
+  }
+
+  .section-space {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

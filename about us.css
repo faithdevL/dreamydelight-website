@@ -1,0 +1,18 @@
+.about-image {
+  width: 85%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 40px;
+  box-shadow: 12px 12px 0 #f7dce5;
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+  .about-image {
+    height: 320px;
+  }
+}
